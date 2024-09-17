@@ -1,12 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="./output.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./fonts.css" rel="stylesheet">
+  <link href="./output.css" rel="stylesheet">
 </head>
-<body>
-    <h1 class="bg-red-700 text-white text-center p-5">Hello World</h1>
+<body class="bg-white">
+    <!-- NAVBAR -->
+    <nav class="bg-black p-4 sticky">
+        <div class="container mx-auto flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <a href="#top">
+                    <img src="assets/img/logo_aksang.png" alt="Logo" class="h-10 w-10">
+                </a>
+            </div>
+
+            <!-- Menu Button (Mobile) -->
+            <div class="block lg:hidden">
+                <button id="menu-toggle" class="text-white focus:outline-none">
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+
+        <!-- Menu Items -->
+            <div id="menu" class="hidden lg:flex space-x-4">
+                <a href="#" class="text-black">About Us</a>
+                <a href="#" class="text-black">Visi & Misi</a>
+                <a href="#" class="text-black">Konten</a>
+                <a href="#" class="text-black">Peta Evakuasi</a>
+            </div>
+        </div>
+
+        <!-- Menu Items (Mobile) -->
+            <div id="mobile-menu" class="hidden lg:hidden px-4 pt-4 pb-2 space-y-2">
+                <a href="#" class="text-black">About Us</a>
+                <a href="#" class="text-black">Visi & Misi</a>
+                <a href="#" class="text-black">Konten</a>
+                <a href="#" class="text-black">Peta Evakuasi</a>
+            </div>
+    </nav>
+
+<script>
+    // Toggle mobile menu
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
+    <!-- NAVBAR END -->
+
+<!-- PAGE -->
+ <h1 id="top">MANUWA ARUTALA</h1>
 </body>
 </html>
