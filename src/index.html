@@ -5,21 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./fonts.css" rel="stylesheet">
   <link href="./output.css" rel="stylesheet">
+  <link href=".\tailwind.config.js" rel="stylesheet">
 </head>
-<body class="bg-white font-body">
+<body class="bg-[#fffbf0] font-body">
     <!-- NAVBAR -->
-    <nav class="bg-black p-4 sticky">
+    <nav class="bg-bgAwal py-8 px-6 sticky">
         <div class="container mx-auto flex items-center justify-between">
             <!-- Logo -->
             <div class="flex items-center">
                 <a href="#top">
-                    <img src="assets/img/logo_aksang.png" alt="Logo" class="h-10 w-10">
+                    <img src="assets/img/logo_aksang.png" alt="Logo" class="h-10 w-10 boxShadow-custom">
                 </a>
             </div>
 
             <!-- Menu Button (Mobile) -->
             <div class="block lg:hidden">
-                <button id="menu-toggle" class="text-white focus:outline-none">
+                <button id="menu-toggle" class="text-black focus:outline-none">
                     <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                     </svg>
@@ -27,20 +28,20 @@
             </div>
 
         <!-- Menu Items -->
-            <div id="menu" class="hidden lg:flex space-x-4">
-                <a href="#" class="text-white">About Us</a>
-                <a href="#" class="text-white">Visi & Misi</a>
-                <a href="#" class="text-white">Konten</a>
-                <a href="#" class="text-white">Peta Evakuasi</a>
+            <div id="menu" class="hidden lg:flex space-x-10">
+                <a href="#" class="text-black"><b>About Us</b></a>
+                <a href="#" class="text-black"><b>Visi & Misi</b></a>
+                <a href="#" class="text-black"><b>Konten</b></a>
+                <a href="#" class="text-black"><b>Peta Evakuasi</b></a>
             </div>
         </div>
 
         <!-- Menu Items (Mobile) -->
-            <div id="mobile-menu" class="hidden lg:hidden px-4 pt-4 pb-2 space-y-2">
-                <a href="#" class="text-white flex">About Us</a>
-                <a href="#" class="text-white flex">Visi & Misi</a>
-                <a href="#" class="text-white flex">Konten</a>
-                <a href="#" class="text-white flex">Peta Evakuasi</a>
+            <div id="mobile-menu" class="hidden lg:hidden pt-6 pb-2 space-y-4">
+                <a href="#" class="text-black flex "><b>About Us</b></a>
+                <a href="#" class="text-black flex"><b>Visi & Misi</b></a>
+                <a href="#" class="text-black flex"><b>Konten</b></a>
+                <a href="#" class="text-black flex"><b>Peta Evakuasi</b></a>
             </div>
     </nav>
 
@@ -56,7 +57,19 @@
     <!-- NAVBAR END -->
 
 <!-- PAGE -->
- <h1 id="top">MANAWA ARUTALA</h1>
+ <h1 id="top" class="flex justify-center text-h3 mt-20 ">MANAWA ARUTALA</h1>
+ <img src="\src\assets\img\peta.png" alt="peta" class="mt-12">
+ 
+ <!-- About Us -->
+ <div id="About Us" class="container mx-auto px-4 mt-4">
+    <div class="flex flex-col items-center lg:flex-row justify-center h-auto w-auto text-balance">
+        <img src="\src\assets\img\logoAngkatan.png" alt="logo angkatan" class="w-64 h-64 mt-4 lg:mr-8 lg:mb-0 mb-4">
+    <p class="text-justify p-6">
+        <b>Manawa Arutala</b> merupakan Aksi Angkatan Teknik Geodesi dan Geomatika yang mengangkat isu tentang salah satu sesar aktif yang berada di Jawa Barat, yaitu Sesar Lembang. Berdasarkan peta tutupan lahan terdampak gempa bumi Kabupaten Bandung Barat, Kecamatan Lembang menjadi salah satu daerah dengan kelas bahaya tinggi dan salah satunya adalah Desa Cibogo. Manawa Arutala akan berisi tentang penyuluhan kepada masyarakat di Desa Cibogo terkait Sesar Lembang dan dampak serta mitigasi bencana yang dapat dilakukan apabila Sesar Lembang bergerak. Selain itu, Manawa Arutala juga akan membantu persiapan proses mitigasi bencana yang dapat dilakukan seperti penentuan jalur evakuasi yang baik dan titik kumpul yang ideal apabila Sesar Lembang bergerak.
+    </p>
+    </div>
+</div>
+<!-- About Us End -->
  
 </body>
 </html>
