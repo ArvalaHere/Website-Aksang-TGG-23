@@ -8,7 +8,11 @@ module.exports = {
         BackgroundColor: '#FAF0B9',
         SecondaryColor: '#AF3700'
     },
+      fontFamily: {
+        body: ["Montserrat"]
+      }
   },
   plugins: [],
 }
 }
+
