@@ -929,3 +929,16 @@ video {
   }
 }
 
+.slides img {
+  display: none;  /* Sembunyikan semua gambar */
+}
+
+.slides img.active {
+  display: block;  /* Hanya gambar dengan kelas 'active' yang ditampilkan */
+  width: 50%; /* Sesuaikan ukuran gambar (50% dari lebar kontainer) */
+  height: auto;
+  max-width: 1000px; /* Atur batas maksimum lebar gambar */
+  margin-left: auto;
+  margin-right: auto;
+}
+
