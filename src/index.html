@@ -3,18 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./fonts.css" rel="stylesheet">
   <link href="./output.css" rel="stylesheet">
   <link href=".\tailwind.config.js" rel="stylesheet">
+  <style>
+    html {
+        scroll-behavior: smooth;
+    }
+    .scroll-offset {
+        padding-top: 150px;
+        margin-top: -150px;
+    }
+</style>
 </head>
-<body class="bg-[#fffbf0] font-body">
-    <!-- NAVBAR -->
-    <nav class="bg-bgAwal py-8 px-6 sticky">
+<body class="bg-BgAwal font-body">
+<!-- NAVBAR -->
+    <nav class="bg-[#320600] shadow-md py-8 px-6 sticky top-0 z-50">
         <div class="container mx-auto flex items-center justify-between">
             <!-- Logo -->
             <div class="flex items-center">
                 <a href="#top">
-                    <img src="assets/img/logo_aksang.png" alt="Logo" class="h-10 w-10 boxShadow-custom">
+                    <img src="assets/img/logo_aksang.png" alt="Logo_aksang" class="h-12 w-12 boxShadow-custom">
                 </a>
             </div>
 
@@ -29,19 +37,19 @@
 
         <!-- Menu Items -->
             <div id="menu" class="hidden lg:flex space-x-10">
-                <a href="#" class="text-black"><b>About Us</b></a>
-                <a href="#" class="text-black"><b>Visi & Misi</b></a>
-                <a href="#" class="text-black"><b>Konten</b></a>
-                <a href="#" class="text-black"><b>Peta Evakuasi</b></a>
+                <a href="#About_Us" class="text-white"><b>About Us</b></a>
+                <a href="#Visi_Misi" class="text-white"><b>Visi & Misi</b></a>
+                <a href="#Konten" class="text-white"><b>Konten</b></a>
+                <a href="#" class="text-white"><b>Peta Evakuasi</b></a>
             </div>
         </div>
 
         <!-- Menu Items (Mobile) -->
             <div id="mobile-menu" class="hidden lg:hidden pt-6 pb-2 space-y-4">
-                <a href="#" class="text-black flex "><b>About Us</b></a>
-                <a href="#" class="text-black flex"><b>Visi & Misi</b></a>
-                <a href="#" class="text-black flex"><b>Konten</b></a>
-                <a href="#" class="text-black flex"><b>Peta Evakuasi</b></a>
+                <a href="#About_Us" class="text-white flex "><b>About Us</b></a>
+                <a href="#Visi_Misi" class="text-white flex"><b>Visi & Misi</b></a>
+                <a href="#Konten" class="text-white flex"><b>Konten</b></a>
+                <a href="#" class="text-white flex"><b>Peta Evakuasi</b></a>
             </div>
     </nav>
 
@@ -54,28 +62,57 @@
             mobileMenu.classList.toggle('hidden');
         });
     </script>
-    <!-- NAVBAR END -->
+<!-- NAVBAR END -->
+
+<div id="top" class="mt-200 mb-200"></div>
 
 <!-- PAGE -->
-<<<<<<< HEAD
- <h1 id="top" class="flex justify-center text-h3 mt-20 ">MANAWA ARUTALA</h1>
+ <div class="flex items-center justify-center mt-12 ">
+    <img src="\src\assets\img\Manawa_Arutala.png" id="top" class="w-full md:w-auto md:max-w-full">
+ </div>
  <img src="\src\assets\img\peta.png" alt="peta" class="mt-12">
  
- <!-- About Us -->
- <div id="About Us" class="container mx-auto px-4 mt-4">
+<!-- About Us -->
+ <div id="About_Us" class="container mx-auto px-4 mt-4">
     <div class="flex flex-col items-center lg:flex-row justify-center h-auto w-auto text-balance">
         <img src="\src\assets\img\logoAngkatan.png" alt="logo angkatan" class="w-64 h-64 mt-4 lg:mr-8 lg:mb-0 mb-4">
     <p class="text-justify p-6">
+        <img src="\src\assets\img\About_Us.png">
         <b>Manawa Arutala</b> merupakan Aksi Angkatan Teknik Geodesi dan Geomatika yang mengangkat isu tentang salah satu sesar aktif yang berada di Jawa Barat, yaitu Sesar Lembang. Berdasarkan peta tutupan lahan terdampak gempa bumi Kabupaten Bandung Barat, Kecamatan Lembang menjadi salah satu daerah dengan kelas bahaya tinggi dan salah satunya adalah Desa Cibogo. Manawa Arutala akan berisi tentang penyuluhan kepada masyarakat di Desa Cibogo terkait Sesar Lembang dan dampak serta mitigasi bencana yang dapat dilakukan apabila Sesar Lembang bergerak. Selain itu, Manawa Arutala juga akan membantu persiapan proses mitigasi bencana yang dapat dilakukan seperti penentuan jalur evakuasi yang baik dan titik kumpul yang ideal apabila Sesar Lembang bergerak.
     </p>
     </div>
 </div>
 <!-- About Us End -->
-=======
- <h1 id="top">MANAWA ARUTALA</h1>
+
+<!-- Visi -->
+<div class="bg-Bg2 shadow-lg">
+<div class="flex items-center justify-left mt-12 mx-20">
+    <img src="\src\assets\img\Visi.png" id="Visi_Misi" class="w-20 h-20 object-contain">
+</div>
+<p class="justify-center p-6 mx-20">
+    Mewujudkan partisipasi aktif mahasiswa Teknik Geodesi dan Geomatika ITB 2023 dalam meningkatkan kesadaran dan kesiapsiagaan masyarakat terhadap Sesar Lembang, melalui aksi nyata dan pengabdian kepada masyarakat.
+</p>
+</div>
+<!-- Visi End -->
+
+<!-- Misi -->
+<div class="bg-Bg2 shadow-lg">
+<div class="flex items-center justify-left mt-12 mx-20">
+    <img src="\src\assets\img\Misi.png" id="Visi_Misi" class="w-20 h-20 object-contain">
+</div>
+<div>
+    <ul class="list-outside list-decimal p-6 mx-20">
+        <li>Mendorong partisipasi aktif dari seluruh massa Teknik Geodesi dan Geomatika ITB 2023 melalui rangkaian kegiatan yang kolaboratif.</li>
+        <li>Meningkatkan kesadaran masyarakat tentang bahaya Sesar Lembang.</li>
+        <li>Menjadikan Aksi Angkatan TGG ITB 2023 sebagai wadah untuk belajar bersama dan menambah wawasan kebencanaan dan langkah-langkah mitigasinya.</li>
+        <li>Menjadikan Aksi Angkatan TGG ITB 2023 sebagai momentum untuk menunjukkan pengabdian massa Teknik Geodesi dan Geomatika ITB 2023 kepada masyarakat.</li>
+    </ul>
+</div>
+</div>
+<!-- Misi End -->
 
 <!-- ISI KONTEN -->
-<div class="slider">
+<div id="Konten" class="slider">
   <div class="slides">
     <img src="https://via.placeholder.com/800x400?text=Image+1" alt="Image 1" class="active:">
     <img src="https://via.placeholder.com/800x400?text=Image+2" alt="Image 2">
@@ -84,6 +121,5 @@
 </div>
   <script src="slide.js"></script>
 >>>>>>> 0fb0d40d350269c89dd16696e0d5946386ae0202
- 
 </body>
 </html>

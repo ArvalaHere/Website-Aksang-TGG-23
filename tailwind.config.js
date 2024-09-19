@@ -8,6 +8,7 @@ module.exports = {
         BackgroundColor: '#FAF0B9',
         SecondaryColor: '#AF3700',
         BgAwal: '#fffbf0',
+        Bg2: '#f6e9b7'
       },
       boxShadow: {
         custom: '2px 2px 8px rgba(0, 0, 0, 0.2)',
