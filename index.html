@@ -40,31 +40,73 @@
             </div>
 
         <!-- Menu Items -->
-            <div id="menu" class="hidden lg:flex space-x-10">
-                <a href="#About_Us" class="text-white"><b>About Us</b></a>
-                <a href="#Visi_Misi" class="text-white"><b>Visi & Misi</b></a>
-                <a href="#Konten" class="text-white"><b>Konten</b></a>
-                <a href="#Peta" class="text-white"><b>Peta Evakuasi</b></a>
+        <div id="menu" class="hidden lg:flex space-x-10">
+            <a href="#About_Us" class="text-white"><b>About Us</b></a>
+            <a href="#Visi_Misi" class="text-white"><b>Visi & Misi</b></a>
+            <div class="relative">
+                <button id="konten-toggle" class="text-white focus:outline-none">
+                    <b>Konten</b>
+                </button>
+                <div id="konten-dropdown" class="absolute left-0 mt-2 w-48 bg-white text-black rounded-md shadow-lg hidden">
+                    <a href="artikelrisiko.html" class="block px-4 py-2 hover:bg-gray-100">Risiko Bencana</a>
+                    <a href="index.html" class="block px-4 py-2 hover:bg-gray-100">Jalur Evakuasi</a>
+                </div>
             </div>
+            <a href="#Peta" class="text-white"><b>Peta Evakuasi</b></a>
         </div>
+    </div>
 
         <!-- Menu Items (Mobile) -->
-            <div id="mobile-menu" class="hidden lg:hidden pt-6 pb-2 space-y-4">
-                <a href="#About_Us" class="text-white flex "><b>About Us</b></a>
-                <a href="#Visi_Misi" class="text-white flex"><b>Visi & Misi</b></a>
-                <a href="#Konten" class="text-white flex"><b>Konten</b></a>
-                <a href="#Peta" class="text-white flex"><b>Peta Evakuasi</b></a>
+        <div id="mobile-menu" class="hidden lg:hidden pt-6 pb-2 space-y-4">
+            <a href="#About_Us" class="text-white flex"><b>About Us</b></a>
+            <a href="#Visi_Misi" class="text-white flex"><b>Visi & Misi</b></a>
+            <div class="relative">
+                <button id="mobile-konten-toggle" class="text-white flex focus:outline-none">
+                    <b>Konten</b> ▼
+                </button>
+                <div id="mobile-konten-dropdown" class="hidden pl-4">
+                    <a href="artikelrisiko.html" class="block text-white">Risiko Bencana</a>
+                    <a href="index.html" class="block text-white">Jalur Evakuasi</a>
+                </div>
             </div>
+            <a href="#Peta" class="text-white flex"><b>Peta Evakuasi</b></a>
+        </div>
     </nav>
 
     <script>
-        // Toggle mobile menu
-        const menuToggle = document.getElementById('menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        menuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+     // Toggle mobile menu
+     const menuToggle = document.getElementById('menu-toggle');
+     const mobileMenu = document.getElementById('mobile-menu');
+ 
+     menuToggle.addEventListener('click', () => {
+         mobileMenu.classList.toggle('hidden');
+     });
+ 
+     // Toggle Konten dropdown for desktop
+     const kontenToggle = document.getElementById('konten-toggle');
+     const kontenDropdown = document.getElementById('konten-dropdown');
+ 
+     kontenToggle.addEventListener('click', () => {
+         kontenDropdown.classList.toggle('hidden');
+     });
+ 
+     // Toggle Konten dropdown for mobile
+     const mobileKontenToggle = document.getElementById('mobile-konten-toggle');
+     const mobileKontenDropdown = document.getElementById('mobile-konten-dropdown');
+ 
+     mobileKontenToggle.addEventListener('click', () => {
+         mobileKontenDropdown.classList.toggle('hidden');
+     });
+ 
+     // Close dropdowns if clicking outside
+     window.addEventListener('click', (event) => {
+         if (!kontenToggle.contains(event.target) && !kontenDropdown.contains(event.target)) {
+             kontenDropdown.classList.add('hidden');
+         }
+         if (!mobileKontenToggle.contains(event.target) && !mobileKontenDropdown.contains(event.target)) {
+             mobileKontenDropdown.classList.add('hidden');
+         }
+     });
     </script>
 <!-- NAVBAR END -->
 
@@ -86,7 +128,7 @@
     </p>
     </div>
 </div>
-<!-- About Us End -->
+<!-- About Us END -->
 
 <!-- Visi -->
 <div class="bg-Bg2 shadow-lg">
@@ -112,10 +154,28 @@
 </div>
 <!-- Misi End -->
 
+<!-- Desa Cibogo dan Sesar Aktif -->
+<div class="bg-BgAwal font-body mb-6 p-6">
+<div class="flex items-center justify-left ">
+    <img src="\src\assets\img\Cibogo.png" id="Cibogo" class="w-auto h-20 px-6 pt-6 object-contain">
+</div>
+    <div class="indent-8 px-6 mt-4 mb-4 pb-6">
+        Sesar aktif merupakan patahan geologis yang masih terus bergerak relatif satu sama lain dan sangat berpotensi menimbulkan bencana terutama bencana gempa. Indonesia terletak di pertemuan tiga lempeng tektonik besar, antara Lempeng Indo-Australia, Lempeng Eurasia, dan Lempeng Pasifik. Interaksi antara lempeng-lempeng itu menyebabkan terbentuknya banyak sesar aktif yang terus bergerak dan menjadi ancaman masyarakat Indonesia.
+    </div>
+    <div class="indent-8 px-6 mt-4 mb-4 pb-6">
+        Diantara banyaknya sesar aktif di Indonesia, terdapat satu sesar aktif yang lokasinya cukup terjangkau untuk dilakukan pengamatan secara langsung yaitu sesar lembang. Lokasi sesar lembang membentang sepanjang sekitar 29 kilometer dari Gunung Palasari di barat hingga ke daerah Cileunyi di timur. Meskipun sesar aktif adalah daerah yang sangat rawan akan bencana, belum banyak masyarakat terkait yang sadar akan ancaman tersebut.
+    </div>
+    <div class="indent-8 px-6 mt-4 mb-4 pb-6">
+        Kami telah melakukan survei terhadap empat desa di Kecamatan Lembang, yaitu Desa Kayuambon, Desa Pagerwangi, Desa Cibogo, dan Desa Langensari. Kami memilih untuk melakukan aksi angkatan di Desa Cibogo. Akan ada penyuluhan atau pencerdasan kepada masyarakat di Desa Cibogo terkait Sesar Lembang dan dampak serta mitigasi bencana yang dapat dilakukan apabila Sesar Lembang bergerak. Selain membantu meningkatkan kewaspadaan masyarakat terkait Sesar Lembang secara non-fisik, kami akan membantu persiapan proses mitigasi bencana yang dapat dilakukan seperti penentuan jalur evakuasi yang baik dan titik kumpul yang ideal apabila Sesar Lembang bergerak. Penyuluhan akan mengundang ahli terkait untuk memberikan penjelasan yang lebih detail terkait sesar lembang dan mitigasi yang dapat dilakukan, serta mengkaji terkait aspek-aspek yang perlu diperhatikan dalam penentuan jalur evakuasi dan titik kumpul yang akan ditentukan.
+    </div>
+</div>
+
+<!-- Desa Cibogo dan Sesar Aktif END -->
+
 <!-- Rumusan Masalah -->
 <div class="bg-Bg3 font-body">
     <div class="flex items-center justify-left mt-12">
-        <img src="\src\assets\img\RumusanMasalah.png" id="Rumusan_Masalah" class="w-auto h-12 pt-6 px-6 rounded-lg object-cover">
+        <img src="\src\assets\img\RumusanMasalah.png" id="Rumusan_Masalah" class="w-auto h-20 pt-6 px-6 rounded-lg object-cover">
     </div>
     <div>
         <ul class="list-outside list-decimal p-12 mx-15">
