@@ -920,6 +920,11 @@ video {
   background-color: rgb(255 251 240 / var(--tw-bg-opacity));
 }
 
+.bg-Bg3{
+  --tw-bg-opacity: 1;
+  background-color: rgb(68 197 158 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#320600\]{
   --tw-bg-opacity: 1;
   background-color: rgb(50 6 0 / var(--tw-bg-opacity));
