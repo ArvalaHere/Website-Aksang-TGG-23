@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="src/assets/css/output.css" rel="stylesheet">
+  <link href="/tailwind.config.js" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="src/assets/img/logo_aksang.png">
+
+  <style>
+    html {
+        scroll-behavior: smooth;
+    }
+    .scroll-offset {
+        padding-top: 150px;
+        margin-top: -150px;
+    }
+</style>
+  <link rel="icon" type="image/x-icon" href="\src\assets\img\logoAngkatan.png">
+</head>
+
+<!-- NAVBAR -->
+<nav class="bg-HeaderFooter shadow-md py-8 px-6 sticky top-0 z-50">
+    <div class="container mx-auto flex items-center justify-between">
+        <!-- Logo -->
+        <div class="flex items-center">
+            <a href="#top">
+                <img src="src/assets/img/logo_aksang.png" alt="Logo_aksang" class="h-12 w-12 boxShadow-custom">
+            </a>
+        </div>
+
+        <!-- Menu Button (Mobile) -->
+        <div class="block lg:hidden">
+            <button id="menu-toggle" class="text-white focus:outline-none">
+                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+
+    <!-- Menu Items -->
+        <div id="menu" class="hidden lg:flex space-x-10">
+            <a href="#About_Us" class="text-white"><b>About Us</b></a>
+            <a href="#Visi_Misi" class="text-white"><b>Visi & Misi</b></a>
+            <a href="#Konten" class="text-white"><b>Konten</b></a>
+            <a href="#Peta" class="text-white"><b>Peta Evakuasi</b></a>
+        </div>
+    </div>
+
+    <!-- Menu Items (Mobile) -->
+        <div id="mobile-menu" class="hidden lg:hidden pt-6 pb-2 space-y-4">
+            <a href="#About_Us" class="text-white flex "><b>About Us</b></a>
+            <a href="#Visi_Misi" class="text-white flex"><b>Visi & Misi</b></a>
+            <a href="#Konten" class="text-white flex"><b>Konten</b></a>
+            <a href="#Peta" class="text-white flex"><b>Peta Evakuasi</b></a>
+        </div>
+</nav>
+
+<script>
+    // Toggle mobile menu
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
+<!-- NAVBAR END -->
+
+<!-- Isi disini yaa -->
+
+<!-- Footer -->
+<div class="flex-grow"></div>
+
+<footer class="bg-HeaderFooter text-white py-8 px-6">
+    <div class="flex justify-center items-center py-8 px-6 relative">
+        <div class="max-w-[120px] h-[60px] p-2.5 top-[65px] md:absolute md:top-4 md:right-4 bg-white rounded-[17px] flex-col justify-start items-start gap-2.5 inline-flex">
+            <div class="Frame1 justify-center items-center gap-5 inline-flex">
+              <a href="https://www.instagram.com/manawaarutala" target="_blank">
+                  <img class="Image2 w-10 h-10" src="\src\assets\img\logoIG.png" />
+              </a>
+              <a href="https://www.tiktok.com/@manawaarutala" target="_blank">
+                  <img class="Image1 w-10 h-10" src="\src\assets\img\LogoTT.png" />
+              </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="min-h-screen flex justify-center text-center text-white text-4xl font-bold font-['SF Pro Display']">
+        <h1 class="flex justify-center">Aksi Angkatan<br/>Teknik Geodesi dan Geomatika ITB 2023</h1>
+    </div>
+</footer>
+<!-- Footer END -->
