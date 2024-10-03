@@ -751,6 +751,10 @@ video {
   min-height: 100vh;
 }
 
+.max-h-48{
+  max-height: 12rem;
+}
+
 .w-10{
   width: 2.5rem;
 }
@@ -779,8 +783,20 @@ video {
   width: 100%;
 }
 
-.max-w-\[120px\]{
-  max-width: 120px;
+.w-10{
+  width: 2.5rem;
+}
+
+.w-\[120px\]{
+  width: 120px;
+}
+
+.w-11\/12{
+  width: 91.666667%;
+}
+
+.max-w-\[1440px\]{
+  max-width: 1440px;
 }
 
 .max-w-\[455px\]{
