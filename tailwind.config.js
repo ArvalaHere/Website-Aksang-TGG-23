@@ -1,7 +1,7 @@
 // GRAND DESIGN WEBSITE
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./*.{html,js}"],
+  content: ["./src/**/*.{html,js}"],
   theme: {
     extend: {
       colors: {
@@ -10,7 +10,6 @@ module.exports = {
         BgAwal: '#fffbf0',
         Bg2: '#f6e9b7',
         HeaderFooter: '#320600',
-        Bg3: '#44C59E',
       },
       boxShadow: {
         custom: '2px 2px 8px rgba(0, 0, 0, 0.2)',
