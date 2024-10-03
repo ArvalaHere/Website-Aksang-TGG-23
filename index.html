@@ -21,7 +21,7 @@
 </head>
 <body class="bg-BgAwal font-body">
 <!-- NAVBAR -->
-    <nav class="bg-HeaderFooter shadow-md py-8 px-6 sticky top-0 z-50">
+    <nav class="bg-[#FFFBF0] shadow-md py-8 px-6 sticky top-0 z-50">
         <div class="container mx-auto flex items-center justify-between">
             <!-- Logo -->
             <div class="flex items-center">
@@ -32,7 +32,7 @@
 
             <!-- Menu Button (Mobile) -->
             <div class="block lg:hidden">
-                <button id="menu-toggle" class="text-white focus:outline-none">
+                <button id="menu-toggle" class="text-black focus:outline-none">
                     <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                     </svg>
@@ -41,35 +41,35 @@
 
         <!-- Menu Items -->
         <div id="menu" class="hidden lg:flex space-x-10">
-            <a href="#About_Us" class="text-white"><b>About Us</b></a>
-            <a href="#Visi_Misi" class="text-white"><b>Visi & Misi</b></a>
+            <a href="#About_Us" class="text-black"><b>About Us</b></a>
+            <a href="#Visi_Misi" class="text-black"><b>Visi & Misi</b></a>
             <div class="relative">
-                <button id="konten-toggle" class="text-white focus:outline-none">
+                <button id="konten-toggle" class="text-black focus:outline-none">
                     <b>Konten</b>
                 </button>
                 <div id="konten-dropdown" class="absolute left-0 mt-2 w-48 bg-white text-black rounded-md shadow-lg hidden">
-                    <a href="artikelrisiko.html" class="block px-4 py-2 hover:bg-gray-100">Risiko Bencana</a>
-                    <a href="index.html" class="block px-4 py-2 hover:bg-gray-100">Jalur Evakuasi</a>
+                    <a href="artikelrisiko.html" class="block px-4 py-12 hover:bg-gray-100">Risiko Bencana</a>
+                    <a href="index.html" class="block px-4 py-12 hover:bg-gray-100">Jalur Evakuasi</a>
                 </div>
             </div>
-            <a href="#Peta" class="text-white"><b>Peta Evakuasi</b></a>
+            <a href="#Peta" class="text-black"><b>Peta Evakuasi</b></a>
         </div>
     </div>
 
         <!-- Menu Items (Mobile) -->
         <div id="mobile-menu" class="hidden lg:hidden pt-6 pb-2 space-y-4">
-            <a href="#About_Us" class="text-white flex"><b>About Us</b></a>
-            <a href="#Visi_Misi" class="text-white flex"><b>Visi & Misi</b></a>
+            <a href="#About_Us" class="text-black flex"><b>About Us</b></a>
+            <a href="#Visi_Misi" class="text-black flex"><b>Visi & Misi</b></a>
             <div class="relative">
-                <button id="mobile-konten-toggle" class="text-white flex focus:outline-none">
+                <button id="mobile-konten-toggle" class="text-black flex focus:outline-none">
                     <b>Konten</b> ▼
                 </button>
                 <div id="mobile-konten-dropdown" class="hidden pl-4">
-                    <a href="artikelrisiko.html" class="block text-white">Risiko Bencana</a>
-                    <a href="index.html" class="block text-white">Jalur Evakuasi</a>
+                    <a href="artikelrisiko.html" class="block text-black">Risiko Bencana</a>
+                    <a href="index.html" class="block text-black">Jalur Evakuasi</a>
                 </div>
             </div>
-            <a href="#Peta" class="text-white flex"><b>Peta Evakuasi</b></a>
+            <a href="#Peta" class="text-black flex"><b>Peta Evakuasi</b></a>
         </div>
     </nav>
 
@@ -113,16 +113,16 @@
 <div id="top" class="mt-200 mb-200"></div>
 
 <!-- PAGE -->
- <div class="flex items-center justify-center mt-12 ">
-    <img src="\src\assets\img\Manawa_Arutala.png" id="top" class="w-full md:w-auto md:max-w-full">
- </div>
- <img src="\src\assets\img\peta.png" alt="peta" class="mt-12">
+<div class="flex items-center justify-center mt-2 relative">
+    <img src="\src\assets\img\Manawa-arutala.png" id="top" class="w-full md:w-auto md:max-w-full relative -top-16 md:-top-36 z-0">
+    <img src="\src\assets\img\Peta.png" alt="peta" class="absolute top-40 md:top-80">
+</div>
  
 <!-- About Us -->
- <div id="About_Us" class="scroll-offset container mx-auto px-4 mt-4">
+ <div id="About_Us" class="scroll-offset container md:top-36 mx-auto py-8 mt-40">
     <div class="flex flex-col items-center lg:flex-row justify-center h-auto w-auto text-balance">
-        <img src="\src\assets\img\logoAngkatan.png" alt="logo angkatan" class="w-64 h-64 mt-4 lg:mr-8 lg:mb-0 mb-4">
-    <p class="text-justify p-6">
+        <img src="\src\assets\img\logoAngkatan.png" alt="logo angkatan" class="w-64 h-64 mt-28 lg:mt-48 lg:mr-8 lg:mb-0 mb-4">
+    <p class="text-justify -mt-12 lg:mt-48 p-6">
         <img src="\src\assets\img\About_Us.png">
         <b>Manawa Arutala</b> merupakan Aksi Angkatan Teknik Geodesi dan Geomatika yang mengangkat isu tentang salah satu sesar aktif yang berada di Jawa Barat, yaitu Sesar Lembang. Berdasarkan peta tutupan lahan terdampak gempa bumi Kabupaten Bandung Barat, Kecamatan Lembang menjadi salah satu daerah dengan kelas bahaya tinggi dan salah satunya adalah Desa Cibogo. Manawa Arutala akan berisi tentang penyuluhan kepada masyarakat di Desa Cibogo terkait Sesar Lembang dan dampak serta mitigasi bencana yang dapat dilakukan apabila Sesar Lembang bergerak. Selain itu, Manawa Arutala juga akan membantu persiapan proses mitigasi bencana yang dapat dilakukan seperti penentuan jalur evakuasi yang baik dan titik kumpul yang ideal apabila Sesar Lembang bergerak.
     </p>
