@@ -1249,6 +1249,10 @@ video {
     top: 1rem;
   }
 
+  .md\:top-94{
+    top: 28rem;
+  }
+
   .md\:top-96{
     top: 24rem;
   }
