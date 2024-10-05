@@ -1311,4 +1311,22 @@ video {
     padding: 3rem;
   }
 }
+.custom-list {
+  list-style-type: disc;
+  margin-left: 20px; 
+}
 
+.content {
+  display: flex;
+  align-items: flex-start;
+}
+
+.content .text {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.content .image img {
+  max-width: 100%;
+  height: auto; /
+}
