@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="src/assets/css/output.css" rel="stylesheet">
+  <link href="/tailwind.config.js" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="src/assets/img/logo_aksang.png">
+
+  <style>
+    html {
+        scroll-behavior: smooth;
+    }
+    .scroll-offset {
+        padding-top: 150px;
+        margin-top: -150px;
+    }
+</style>
+  <link rel="icon" type="image/x-icon" href="\src\assets\img\logoAngkatan.png">
+</head>
+
+<body class="bg-BgAwal font-body">
+<!-- NAVBAR -->
+<nav class="bg-HeaderFooter shadow-md py-8 px-6 sticky top-0 z-50">
+    <div class="container mx-auto flex items-center justify-between">
+        <!-- Logo -->
+        <div class="flex items-center">
+            <a href="index.html">
+                <img src="src/assets/img/logo_aksang.png" alt="Logo_aksang" class="h-12 w-12 boxShadow-custom">
+            </a>
+        </div>
+
+        <!-- Menu Button (Mobile) -->
+        <div class="block lg:hidden">
+            <button id="menu-toggle" class="text-white focus:outline-none">
+                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Menu Items -->
+        <div id="menu" class="hidden lg:flex space-x-10">
+            <a href="index.html#About_Us" class="text-white"><b>About Us</b></a>
+            <a href="index.html#Visi_Misi" class="text-white"><b>Visi & Misi</b></a>
+            <a href="index.html#Dokumentasi" class="text-white"><b>Dokumentasi</b></a>
+            <div class="relative">
+                <button id="konten-toggle" class="text-white focus:outline-none">
+                    <b>Konten</b>
+                </button>
+                <div id="konten-dropdown" class="absolute left-0 mt-2 w-48 bg-white text-black rounded-md shadow-lg hidden">
+                    <a href="artikelrisiko.html" class="block px-4 py-2 hover:bg-gray-100">Risiko Bencana</a>
+                    <a href="index.html" class="block px-4 py-2 hover:bg-gray-100">Jalur Evakuasi</a>
+                </div>
+            </div>
+            <a href="index.html#Peta" class="text-white"><b>Peta Evakuasi</b></a>
+        </div>
+    </div>
+
+    <!-- Menu Items (Mobile) -->
+    <div id="mobile-menu" class="hidden lg:hidden pt-6 pb-2 space-y-4">
+        <a href="index.html#About_Us" class="text-white flex"><b>About Us</b></a>
+        <a href="index.html#Visi_Misi" class="text-white flex"><b>Visi & Misi</b></a>
+        <a href="index.html#Dokumentasi" class="text-white"><b>Dokumentasi</b></a>
+        <div class="relative">
+            <button id="mobile-konten-toggle" class="text-white flex focus:outline-none">
+                <b>Konten</b> ▼
+            </button>
+            <div id="mobile-konten-dropdown" class="hidden pl-4">
+                <a href="artikelrisiko.html" class="block text-white">Risiko Bencana</a>
+                <a href="index.html" class="block text-white">Jalur Evakuasi</a>
+            </div>
+        </div>
+        <a href="index.html#Peta" class="text-white flex"><b>Peta Evakuasi</b></a>
+    </div>
+</nav>
+
+<script>
+    // Toggle mobile menu
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    // Toggle Konten dropdown for desktop
+    const kontenToggle = document.getElementById('konten-toggle');
+    const kontenDropdown = document.getElementById('konten-dropdown');
+
+    kontenToggle.addEventListener('click', () => {
+        kontenDropdown.classList.toggle('hidden');
+    });
+
+    // Toggle Konten dropdown for mobile
+    const mobileKontenToggle = document.getElementById('mobile-konten-toggle');
+    const mobileKontenDropdown = document.getElementById('mobile-konten-dropdown');
+
+    mobileKontenToggle.addEventListener('click', () => {
+        mobileKontenDropdown.classList.toggle('hidden');
+    });
+
+    // Close dropdowns if clicking outside
+    window.addEventListener('click', (event) => {
+        if (!kontenToggle.contains(event.target) && !kontenDropdown.contains(event.target)) {
+            kontenDropdown.classList.add('hidden');
+        }
+        if (!mobileKontenToggle.contains(event.target) && !mobileKontenDropdown.contains(event.target)) {
+            mobileKontenDropdown.classList.add('hidden');
+        }
+    });
+</script>
+<!-- NAVBAR END -->
+
+<!--Risiko Bencana di Desa Cibogo dan Mitigasinya-->
+<div class="justify-center max-w-4xl mx-auto rounded-lg p-6">
+<div class="flex items-center justify-left ">
+    <img src="\src\assets\img\RisikoTitle.png" id="TitleRisiko" class="w-auto h-20 px-6 pt-6 object-contain">
+</div>
+
+<div clas="max-w-4xl mx-auto rounded-lg p-6 md:p-8 lg:p-12">
+<ul class="text-justify p-6 mx-20">
+    <ul>
+        <p>Pada bagian ini, akan dijelaskan terkait bencana yang mungkin timbul di desa Cibogo, Kecamatan Lembang, Kabupaten Bandung Barat. Selain itu, kami akan memaparkan langkah mitigasi, dan dampak dari setiap bencana yang mungkin muncul.</p>
+        <br>
+        <p>Bencana adalah peristiwa atau rangkaian peristiwa yang mengancam dan mengganggu kehidupan dan penghidupan masyarakat yang disebabkan oleh faktor alam atau faktor non alam maupun faktor manusia sehingga mengakibatkan timbulnya korban jiwa, kerusakan lingkungan, kerugian harta benda dan dampak psikologis.</p>
+        <br>
+        <p>Mitigasi adalah upaya yang memiliki sejumlah tujuan yakni untuk mengenali risiko penyadaran akan risiko bencana, perencanaan penanggulangan, dan sebagainya. Bisa dikatakan, mitigasi bencana adalah segala upaya mulai dari pencegahan sebelum suatu bencana terjadi sampai dengan penanganan usai suatu bencana terjadi.</p>
+        <br>
+        <p>Sebelum masuk ke bencana yang mungkin muncul, terdapat salah satu arahan dari BNPB terkait LIFE BAG yaitu tas yang berisi segala kebutuhan saat terjadi bencana.</p>
+    </ul>
+</ul>
+</div>
+
+<div class="justify-center max-w-4xl mx-auto rounded-lg p-6 flex relative">
+    <img class="justify-center p-6 mx-20"src="https://assets.kompasiana.com/items/album/2022/11/22/tas-asb-637cd67e4addee4cc3244ab2.jpg?t=o&v=740&x=416" width="740" height="784">
+</div>
+
+<!--Bencana Yang mungkin terjadi-->
+<div class="justify-center max-w-4xl mx-auto rounded-lg p-6">
+    <p class="justify-center p-6 mx-20">Berikut merupakan bencana yang mungkin muncul di Desa Cibogo:</p>
+    <h1 class="justify-center p-6 mx-20" style="font-size: 32px;"> 
+        <b>1. Gempa Bumi</b>
+    </h1>
+    
+    <ul class="justify-center p-0 mx-20">
+        <p class="text-justify p-6 mx-20">Menurut KBBI, gempa/gem·pa/ n 1 guncangan; gerakan (bumi); 2 Geo peristiwa alam berupa getaran atau gerakan bergelombang pada kulit bumi yang ditimbulkan oleh tenaga asal dalam; gempa bumi. Secara teori gempa bumi adalah getaran atau guncangan yang terjadi di permukaan bumi akibat pelepasan energi dari dalam bumi secara tiba-tiba. Energi ini biasanya berasal dari pergerakan lempeng tektonik, aktivitas vulkanik, atau runtuhan batuan. Getaran gempa bumi ini dapat terasa lemah atau sangat kuat, tergantung pada besarnya energi yang dilepaskan.</p>
+        <h2 class="text-justify p-6 mx-20">
+            <b>Jenis-Jenis Gempa Bumi</b>
+        </h2>
+        <p class="text-justify p-6 mx-20">Berdasarkan penyebabnya, gempa bumi dapat dibedakan menjadi beberapa jenis:</p>
+        <ul class="list-outside list-decimal p-6 mx-20">
+            <li>Gempa Bumi Tektonik: Jenis gempa bumi yang paling umum dan disebabkan oleh pergeseran lempeng tektonik bumi.</li>
+            <li>Gempa Bumi Vulkanik: Terjadi akibat aktivitas gunung berapi, seperti pergerakan magma atau letusan gunung berapi.</li>
+            <li>Gempa Bumi Runtuhan: Disebabkan oleh runtuhan batuan di dalam bumi, misalnya dalam gua atau tambang.</li>
+        </ul>
+        <br>
+        <p class="text-justify p-6 mx-20">Dilansir dalam cnnindonesia.com, dari data penelitian selama dua tahun, sesar lembang menghasilkan 14 bumi walau dalam skala yang kecil. Melihat keadaan desa Cibogo yang merupakan salah satu wilayah terdampak sesar lembang dan dapat menyebabkan gempa bumi sewaktu-waktu (Meniti Setapak Jejak Gempa Sesar Lembang, 2021). Seperti yang kita ketahui, gempa bumi tidak hanya disebabkan oleh aktivitas lempeng bumi (gempa tektonik), gempa juga dapat terjadi akibat aktivitas vulkanis. Jarak desa Cibogo dengan gunung tangkuban perahu (salah satu gunung aktif) adalah sekitar 5 km. Karena faktor utama yaitu desa Cibogo dilalui sesar lembang serta faktor lainnya, dapat diketahui bahwa desa Cibogo merupakan wilayah dengan risiko terdampak gempa bumi.</p>  
+        <br>
+        <h2 class="text-justify p-6 mx-20">
+        <b>Mitigasi Gempa Bumi</b>
+        </h2>
+        <p class="text-justify p-6 mx-20">Untuk mengurangi dampak negatif gempa bumi, kita dapat melakukan beberapa upaya mitigasi, seperti:</p>
+        <ul class=" list-decimal p-6 mx-20">
+            <li>Membangun Bangunan Tahan Gempa: Bangunan harus dirancang dan dibangun dengan memperhatikan standar tahan gempa.</li>
+            <li>Sistem Peringatan Dini: Sistem peringatan dini dapat memberikan waktu bagi masyarakat untuk menyelamatkan diri sebelum gempa bumi terjadi.</li>
+            <li>Edukasi: Masyarakat perlu diberikan edukasi tentang gempa bumi, cara menghadapi gempa, dan jalur evakuasi.</li>
+            <li>Latihan Evakuasi: Melakukan latihan evakuasi secara rutin dapat meningkatkan kesiapsiagaan masyarakat dalam menghadapi gempa bumi.</li>
+        </ul>
+        <br>
+        <p>Panduan mitigasi gempa secara lengkap dapat diakses pada: PANDUAN MITIGASI 2024.pdf </p>
+    </ul>
+</div>
+
+<!--Tanah Longsor-->
+<div class="justify-center max-w-4xl mx-auto rounded-lg p-6">
+    <h1 class="justify-center p-6 mx-20" style="font-size: 32px;"> 
+        <b>2. Tanah Longsor</b>
+    </h1>
+    <ul class="text-justify p-6 mx-20">
+        <p>     Tanah longsor merupakan salah satu jenis bencana alam geologis yang terjadi karena adanya pergerakan massa batuan atau tanah. Tanah longsor juga dapat diartikan peristiwa berpindahnya material dari tempat yang tinggi ke tempat yang lebih rendah. Tanah longsor juga memberikan dampak yang nyata dan bersifat destruktif. Berikut dampak dampak yang dihasilkan akibat tanah longsor.</p>
+        <ul class="list-decimal p-6 mx-20">
+            <li>Berkurangnya nilai real estat di daerah yang terancam tanah longsor.</li>
+            <li>Hilangnya produktivitas industri, pertanian, dan kehutanan, serta pendapatan dari sektor pariwisata, sebagai akibat dari kerusakan lahan atau fasilitas atau gangguan sistem transportasi.</li>
+            <li>Biaya yang besar tindakan untuk mencegah atau mengurangi potensi aktivitas tanah longsor</li>
+            <li>Menimbulkan korban jiwa.</li>
+            <li>Hilangnya produktivitas manusia atau hewan peliharaan karena kematian, cedera, atau trauma psikologis.</li>
+        </ul>
+        <br>
+        <p class="text-justify">Dalam “Keputusan Kepala Badan Pendidikan Dan Pelatihan Kementerian Pertahanan Indonesia Nomor: Kep/ 98 / Iv /2016 Tentang Bahan Pembelajaran Pencegahan Dan Mitigasi” berikut merupakan langkah mitigasi dari Tanah Longsor.</p>
+        <ul class="list-decimal p-6 mx-20">
+            <li>Jangan membuat kolam atau sawah di atas lereng</li>
+            <li>Tidak mendirikan rumah di bawah tebing</li>
+            <li>Jangan menebang pohon di sekitar lereng</li>
+            <li>Jangan memotong tebing secara tegak lurus</li>
+            <li>Tidak mendirikan bangunan di sekitar sungai</li>
+            <li>Membuat terasering</li>
+            <li>Lakukan upaya prevent</li>
+        </ul>
+    </ul>
+</div>
+
+<!-- Gunung Berapi -->
+<div class="justify-center max-w-4xl mx-auto rounded-lg p-6">
+    <h1 class="justify-center p-6 mx-20" style="font-size: 32px;">
+        <b>3. Gunung Berapi (Aktivitas Vulkanik)</b>
+    </h1>
+    <ul class="text-justify p-6 mx-20">
+        <ul>
+            <p class="text-justify">Gunung api Tangkuban Parahu merupakan gunung api aktif yang memiliki 9 kawah dengan dua kawah utama berada di area puncak, yaitu Kawah Ratu dan Kawah Upas. Erupsi Tangkuban Parahu pada umumnya berupa letusan freatik dari Kawah Ratu. Jarak desa Cibogo sendiri jika ditarik garis lurus dari kawah utama gunung api Tangkuban Parahu di kisaran 5 km. Hal tersebut pula dapat menyebabkan dampak bagi desa Cibogo apabila terjadi erupsi misalnya abu hasil erupsi.</p>
+            <br>
+            <p class="text-justify">Hingga saat ini tingkat aktivitas vulkanik Gunung Tangkuban Parahu masih berada pada Level I (Normal), ditandai dengan aktivitas hembusan asap dari Kawah Ratu berwarna putih dengan intensitas tipis hingga tebal, dengan ketinggian 5 hingga 150 m di atas dasar kawah dan 5 hingga 175 m di atas dasar Kawah Ecoma. Tidak teramati keluarnya abu vulkanik di sekitar kawah ratu. Meskipun aktivitas erupsi terakhir yang tercatat adalah pada tahun 2019, kejadian yang sama dapat terulang kembali kapanpun. Maka, aktivitas vulkanik juga merupakan salah satu sumber bencana yang mungkin muncul.</p>
+            <br>
+            <p class="text-justify">Dalam “Keputusan Kepala Badan Pendidikan Dan Pelatihan Kementerian Pertahanan Indonesia Nomor: Kep/ 98 / Iv /2016 Tentang Bahan Pembelajaran Pencegahan Dan Mitigasi” berikut merupakan langkah mitigasi dari erupsi gunung berapi.</p>  
+        </ul>
+        <br>
+        <p class="text-justify p-6 mx-20"><b>Sebelum Terjadi</b></p>
+        <p class="text-justify">Tindakan yang harus dilakukan oleh individu/masyarakat sebelum terjadi letusan adalah sebagai berikut:</p>
+        <ul class="list-decimal">
+            <li>Mengenali daerah setempat yang dapat dijadikan tempat mengungsi.</li>
+            <li>Memantau dan mendengarkan informasi tentang status gunung api.</li>
+            <li>Mengikuti bimbingan dan penyuluhan dari pihak yang bertanggung jawab.</li>
+            <li>Memiliki persediaan kebutuhan-kebutuhan dasar, seperti obat-obatan dan makanan yang memadai.</li>
+            <li>Mengikuti arahan evakuasi pihak berwenang.</li>
+            <li>Membawa barang-barang yang berharga, terutama dokumen dan surat penting.</li>
+        </ul>
+        <br>
+        <p class="text-justify p-6 mx-20"><b>Saat Terjadi</b></p>
+        <p>Tindakan yang dapat dilakukan oleh individu/masyarakat saat terjadi letusan adalah sebagai berikut:</p>
+        <ul class="list-decimal">
+            <li>Jika ada evakuasi, pastikan tidak kembali ke kediaman sampai keadaan sudah dipastikan aman.</li>
+            <li>Hindari daerah rawan bencana, seperti lereng gunung, lembah, dan daerah aliran lahar.</li>
+            <li>Ketika melihat lahar atau benda lain yang mendekati rumah, segera selamatkan diri dan cari perlindungan<br> terdekat. </li>
+            <li>Lindungi diri dari debu dan awan panas.</li>
+            <li>Pakailah kacamata pelindung.</li>
+            <li>Pakailah masker kain untuk menutup mulut dan hidung. </li>
+        </ul>
+        <br>
+        <p class="text-justify p-6 mx-20"><b>Setelah Terjadi</b></p>
+        <p>Tindakan yang dapat dilakukan oleh individu/masyarakat setelah terjadi letusan adalah sebagai berikut:</p>
+        <ul class="list-decimal">
+            <li>Mengikuti infurmasi perkembangan status gunung api.</li>
+            <li>Apabila sudah dianggap aman dan dapat kembali, periksalah rumah dan barang lain yang ada.</li>
+            <li>Menghubungi dan mengecek saudara dan kerabat yang lain.</li>
+            <li>Bersama dengan warga dan pemerintah bergotong royong membersihkan dan memperbaiki sarana sarana yang masih dapat dimanfaatkan.</li>
+            <li>Jauhi daerah yang terkena hujan abu.</li>
+            <li>Membantu tim medis menolong para korban.</li>
+        </ul>
+    </ul>
+
+</div>
+
+
+
+<div class="flex items-center justify-left mt-12">
+
+</div>
+</div>
+<!-- Footer -->
+<div class="flex-grow"></div>
+
+<footer class="bg-HeaderFooter text-white py-8 px-6">
+    <div class="flex justify-center items-center py-8 px-6 relative">
+        <div class="max-w-[120px] h-[60px] p-2.5 top-[65px] md:absolute md:top-4 md:right-4 bg-white rounded-[17px] flex-col justify-start items-start gap-2.5 inline-flex">
+            <div class="justify-center items-center gap-5 inline-flex">
+              <a href="https://www.instagram.com/manawaarutala" target="_blank">
+                  <img class="Image2 w-10 h-10" src="\src\assets\img\logoIG.png" />
+              </a>
+              <a href="https://www.tiktok.com/@manawaarutala" target="_blank">
+                  <img class="Image1 w-10 h-10" src="\src\assets\img\LogoTT.png" />
+              </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex justify-center text-center text-white text-4xl font-bold font-['SF Pro Display']">
+        <h1 class="flex justify-center">Aksi Angkatan<br/>Teknik Geodesi dan Geomatika ITB 2023</h1>
+    </div>
+</footer>
+<!-- Footer END -->
+</body>

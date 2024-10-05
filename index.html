@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="src/assets/css/output.css" rel="stylesheet">
   <link href="/tailwind.config.js" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="src/assets/img/logo_aksang.png">
+
   <style>
     html {
         scroll-behavior: smooth;
@@ -19,7 +21,7 @@
 </head>
 <body class="bg-BgAwal font-body">
 <!-- NAVBAR -->
-    <nav class="bg-HeaderFooter shadow-md py-8 px-6 sticky top-0 z-50">
+    <nav class="bg-[#FFFBF0] shadow-md py-8 px-6 sticky top-0 z-50">
         <div class="container mx-auto flex items-center justify-between">
             <!-- Logo -->
             <div class="flex items-center">
@@ -30,7 +32,7 @@
 
             <!-- Menu Button (Mobile) -->
             <div class="block lg:hidden">
-                <button id="menu-toggle" class="text-white focus:outline-none">
+                <button id="menu-toggle" class="text-black focus:outline-none">
                     <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                     </svg>
@@ -38,58 +40,106 @@
             </div>
 
         <!-- Menu Items -->
-            <div id="menu" class="hidden lg:flex space-x-10">
-                <a href="#About_Us" class="text-white"><b>About Us</b></a>
-                <a href="#Visi_Misi" class="text-white"><b>Visi & Misi</b></a>
-                <a href="#Konten" class="text-white"><b>Konten</b></a>
-                <a href="#Peta" class="text-white"><b>Peta Evakuasi</b></a>
+        <div id="menu" class="hidden lg:flex space-x-10">
+            <a href="#About_Us" class="text-black"><b>About Us</b></a>
+            <a href="#Visi_Misi" class="text-black"><b>Visi & Misi</b></a>
+            <a href="#Dokumentasi" class="text-black"><b>Dokumentasi</b></a>
+            <div class="relative">
+                <button id="konten-toggle" class="text-black focus:outline-none">
+                    <b>Konten</b>
+                </button>
+                <div id="konten-dropdown" class="absolute left-0 mt-2 w-48 bg-white text-black rounded-md shadow-lg hidden">
+                    <a href="artikelrisiko.html" class="block px-4 py-12 hover:bg-gray-100">Risiko Bencana</a>
+                    <a href="index.html" class="block px-4 py-12 hover:bg-gray-100">Jalur Evakuasi</a>
+                </div>
             </div>
+            <a href="#Peta" class="text-black"><b>Peta Evakuasi</b></a>
         </div>
+    </div>
 
         <!-- Menu Items (Mobile) -->
-            <div id="mobile-menu" class="hidden lg:hidden pt-6 pb-2 space-y-4">
-                <a href="#About_Us" class="text-white flex "><b>About Us</b></a>
-                <a href="#Visi_Misi" class="text-white flex"><b>Visi & Misi</b></a>
-                <a href="#Konten" class="text-white flex"><b>Konten</b></a>
-                <a href="#Peta" class="text-white flex"><b>Peta Evakuasi</b></a>
+        <div id="mobile-menu" class="hidden lg:hidden pt-6 pb-2 space-y-4">
+            <a href="#About_Us" class="text-black flex"><b>About Us</b></a>
+            <a href="#Visi_Misi" class="text-black flex"><b>Visi & Misi</b></a>
+            <a href="#Dokumentasi" class="text-black flex"><b>Dokumetnasi</b></a>
+            <div class="relative">
+                <button id="mobile-konten-toggle" class="text-black flex focus:outline-none">
+                    <b>Konten</b> ▼
+                </button>
+                <div id="mobile-konten-dropdown" class="hidden pl-4">
+                    <a href="artikelrisiko.html" class="block text-black">Risiko Bencana</a>
+                    <a href="index.html" class="block text-black">Jalur Evakuasi</a>
+                </div>
             </div>
+            <a href="#Peta" class="text-black flex"><b>Peta Evakuasi</b></a>
+        </div>
     </nav>
 
     <script>
-        // Toggle mobile menu
-        const menuToggle = document.getElementById('menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        menuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+     // Toggle mobile menu
+     const menuToggle = document.getElementById('menu-toggle');
+     const mobileMenu = document.getElementById('mobile-menu');
+ 
+     menuToggle.addEventListener('click', () => {
+         mobileMenu.classList.toggle('hidden');
+     });
+ 
+     // Toggle Konten dropdown for desktop
+     const kontenToggle = document.getElementById('konten-toggle');
+     const kontenDropdown = document.getElementById('konten-dropdown');
+ 
+     kontenToggle.addEventListener('click', () => {
+         kontenDropdown.classList.toggle('hidden');
+     });
+ 
+     // Toggle Konten dropdown for mobile
+     const mobileKontenToggle = document.getElementById('mobile-konten-toggle');
+     const mobileKontenDropdown = document.getElementById('mobile-konten-dropdown');
+ 
+     mobileKontenToggle.addEventListener('click', () => {
+         mobileKontenDropdown.classList.toggle('hidden');
+     });
+ 
+     // Close dropdowns if clicking outside
+     window.addEventListener('click', (event) => {
+         if (!kontenToggle.contains(event.target) && !kontenDropdown.contains(event.target)) {
+             kontenDropdown.classList.add('hidden');
+         }
+         if (!mobileKontenToggle.contains(event.target) && !mobileKontenDropdown.contains(event.target)) {
+             mobileKontenDropdown.classList.add('hidden');
+         }
+     });
     </script>
 <!-- NAVBAR END -->
 
 <div id="top" class="mt-200 mb-200"></div>
 
 <!-- PAGE -->
- <div class="flex items-center justify-center mt-12 ">
-    <img src="\src\assets\img\Manawa_Arutala.png" id="top" class="w-full md:w-auto md:max-w-full">
- </div>
- <img src="\src\assets\img\peta.png" alt="peta" class="mt-12">
+<div class="flex items-center justify-center relative py-2">
+    <div class="relative">
+        <img src="\src\assets\img\Manawa-arutala.png" alt="Image" class="w-full h-auto object-cover -top-14 md:-top-32 relative z-10" />
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-white opacity-75"></div>
+    </div>
+    <img src="\src\assets\img\Peta.png" alt="peta" class="absolute top-48 md:top-96 z-20" style="width: 100%; height: auto;">
+</div>
+
  
 <!-- About Us -->
- <div id="About_Us" class="scroll-offset container mx-auto px-4 mt-4">
-    <div class="flex flex-col items-center lg:flex-row justify-center h-auto w-auto text-balance">
-        <img src="\src\assets\img\logoAngkatan.png" alt="logo angkatan" class="w-64 h-64 mt-4 lg:mr-8 lg:mb-0 mb-4">
-    <p class="text-justify p-6">
-        <img src="\src\assets\img\About_Us.png">
+ <div id="About_Us" class="scroll-offset container md:top-36 mx-auto py-8 mt-40">
+    <div class="flex flex-col items-center lg:flex-row justify-center h-auto w-auto text-balance mt-24">
+        <img src="\src\assets\img\logoAngkatan.png" alt="logo angkatan" class="w-64 h-64 mt-12 lg:mt-36 lg:mr-8 lg:mb-0 mb-4">
+    <p class="text-justify -mt-4 lg:mt-36 p-6">
+        <img src="\src\assets\img\About_Us.png" class="w-auto h-20 px-0 pt-6 object-contain">
         <b>Manawa Arutala</b> merupakan Aksi Angkatan Teknik Geodesi dan Geomatika yang mengangkat isu tentang salah satu sesar aktif yang berada di Jawa Barat, yaitu Sesar Lembang. Berdasarkan peta tutupan lahan terdampak gempa bumi Kabupaten Bandung Barat, Kecamatan Lembang menjadi salah satu daerah dengan kelas bahaya tinggi dan salah satunya adalah Desa Cibogo. Manawa Arutala akan berisi tentang penyuluhan kepada masyarakat di Desa Cibogo terkait Sesar Lembang dan dampak serta mitigasi bencana yang dapat dilakukan apabila Sesar Lembang bergerak. Selain itu, Manawa Arutala juga akan membantu persiapan proses mitigasi bencana yang dapat dilakukan seperti penentuan jalur evakuasi yang baik dan titik kumpul yang ideal apabila Sesar Lembang bergerak.
     </p>
     </div>
 </div>
-<!-- About Us End -->
+<!-- About Us END -->
 
 <!-- Visi -->
 <div class="bg-Bg2 shadow-lg">
 <div class="flex items-center justify-left mt-12 pt-6">
-    <img src="\src\assets\img\Visi.png" id="Visi_Misi" class="pt-6 px-6 object-contain scroll-offset">
+    <img src="\src\assets\img\Visi.png" id="Visi_Misi" class="w-auto h-20 px-6 pt-6 object-contain">
 </div>
 <p class="justify-center p-6 mx-15 self-stretch text-justify text-black text-[15px] font-body">
     Mewujudkan partisipasi aktif mahasiswa Teknik Geodesi dan Geomatika ITB 2023 dalam meningkatkan kesadaran dan kesiapsiagaan masyarakat terhadap Sesar Lembang, melalui aksi nyata dan pengabdian kepada masyarakat.
@@ -98,7 +148,7 @@
 
 <!-- Misi -->
 <div class="flex items-center justify-left mt-12">
-    <img src="\src\assets\img\Misi.png" id="Visi_Misi" class="px-6 object-contain">
+    <img src="\src\assets\img\Misi.png" id="Visi_Misi" class="w-auto h-20 px-6 pt-6 object-contain">
 </div>
 <div>
     <ul class="list-outside list-decimal p-12 mx-15">
@@ -110,15 +160,64 @@
 </div>
 <!-- Misi End -->
 
-<!-- ISI KONTEN -->
-<div class="flex items-center justify-left mt-12">
-    <img src="\src\assets\img\Konten.png" id="Konten" class="px-6 object-contain scroll-offset">
+<!-- Desa Cibogo dan Sesar Aktif -->
+<div class="bg-BgAwal font-body mb-6 p-6">
+<div class="flex items-center justify-left ">
+    <img src="\src\assets\img\Cibogo.png" id="Cibogo" class="w-auto h-20 px-6 pt-6 object-contain">
+</div>
+    <div class="indent-8 px-6 mt-4 mb-4 pb-6">
+        Sesar aktif merupakan patahan geologis yang masih terus bergerak relatif satu sama lain dan sangat berpotensi menimbulkan bencana terutama bencana gempa. Indonesia terletak di pertemuan tiga lempeng tektonik besar, antara Lempeng Indo-Australia, Lempeng Eurasia, dan Lempeng Pasifik. Interaksi antara lempeng-lempeng itu menyebabkan terbentuknya banyak sesar aktif yang terus bergerak dan menjadi ancaman masyarakat Indonesia.
+    </div>
+    <div class="indent-8 px-6 mt-4 mb-4 pb-6">
+        Diantara banyaknya sesar aktif di Indonesia, terdapat satu sesar aktif yang lokasinya cukup terjangkau untuk dilakukan pengamatan secara langsung yaitu sesar lembang. Lokasi sesar lembang membentang sepanjang sekitar 29 kilometer dari Gunung Palasari di barat hingga ke daerah Cileunyi di timur. Meskipun sesar aktif adalah daerah yang sangat rawan akan bencana, belum banyak masyarakat terkait yang sadar akan ancaman tersebut.
+    </div>
+    <div class="indent-8 px-6 mt-4 mb-4 pb-6">
+        Kami telah melakukan survei terhadap empat desa di Kecamatan Lembang, yaitu Desa Kayuambon, Desa Pagerwangi, Desa Cibogo, dan Desa Langensari. Kami memilih untuk melakukan aksi angkatan di Desa Cibogo. Akan ada penyuluhan atau pencerdasan kepada masyarakat di Desa Cibogo terkait Sesar Lembang dan dampak serta mitigasi bencana yang dapat dilakukan apabila Sesar Lembang bergerak. Selain membantu meningkatkan kewaspadaan masyarakat terkait Sesar Lembang secara non-fisik, kami akan membantu persiapan proses mitigasi bencana yang dapat dilakukan seperti penentuan jalur evakuasi yang baik dan titik kumpul yang ideal apabila Sesar Lembang bergerak. Penyuluhan akan mengundang ahli terkait untuk memberikan penjelasan yang lebih detail terkait sesar lembang dan mitigasi yang dapat dilakukan, serta mengkaji terkait aspek-aspek yang perlu diperhatikan dalam penentuan jalur evakuasi dan titik kumpul yang akan ditentukan.
+    </div>
+    <div class="px-6 mt-4 mb-4 pb-4">
+        <a href=artikelrisiko.html >Baca selengkapnya:</a>
+    </div>
+    <div class="flex justify-center items-center mt-4 mb-4 pb-6">
+        <a href="artikelrisiko.html" class="group block max-w-xs mx-auto rounded-lg p-6 bg-Bg3 text-white ring-1 ring-slate-900/5 shadow-lg space-y-3">
+            <div class="flex items-center space-x-3">
+              <h3 class="text-white group-hover:text-white text-sm">Risiko Bencana Desa Cibogo</h3>
+            </div>
+          </a>
+    </div>
+    <div class="flex justify-center items-center mt-4 mb-4 pb-6">
+        <a href="artikelrisiko.html" class="group block max-w-xs mx-auto rounded-lg p-6 bg-Bg3 text-white ring-1 ring-slate-900/5 shadow-lg space-y-3">
+            <div class="flex items-center space-x-3">
+              <h3 class="text-white group-hover:text-white text-sm">Jalur Evakuasi</h3>
+            </div>
+          </a>
+    </div>
+</div>
+
+<!-- Desa Cibogo dan Sesar Aktif END -->
+
+<!-- Rumusan Masalah -->
+<!-- <div class="bg-Bg3 font-body">
+    <div class="flex items-center justify-left mt-12">
+        <img src="\src\assets\img\RumusanMasalah.png" id="Rumusan_Masalah" class="w-auto h-20 pt-6 px-6 rounded-lg object-cover">
+    </div>
+    <div>
+        <ul class="list-outside list-decimal p-12 mx-15">
+            <li>Berapa besar potensi bencana di wilayah sesar lembang?</li>
+            <li>Bagaimana cara meningkatkan kesadaran masyarakat akan tingkat kerawanan di daerah sesar lembang?</li>
+        </ul>
+</div>
+</div> -->
+<!-- Rumusan Masalah END -->
+
+<!-- Dokumentasi -->
+<div class="flex items-center justify-left mt-12 scroll-offset" id="Dokumentasi">
+    <img src="\src\assets\img\Dokumentasi.png" class="w-auto h-20 px-6 pt-6 object-contain">
 </div>
 <div class="slider">
     <div class="slides">
-      <img src="\Foto angkatan.JPG" alt="Image 1" class="active">
-      <img src="\Pemasangan Tikum 1.JPG" alt="Image 2" class="active">
-      <img src="\Pembagian Brosur Respondens.JPG" alt="Image 3" class="active">
+      <img src="\src\assets\img\Foto angkatan.JPG" alt="Image 1" class="active">
+      <img src="\src\assets\img\Pemasangan Tikum 1.JPG" alt="Image 2" class="active">
+      <img src="\src\assets\img\Pembagian Brosur Respondens.JPG" alt="Image 3" class="active">
       <img src="\src\assets\img\Pemasangan Tikum 2.JPG" alt="Image 4" class="active">
       <img src="\src\assets\img\Sosialisasi ke anak anak.JPG" alt="Image 5" class="active">
       <img src="\src\assets\img\Pembagian Brosur.JPG" alt="Image 6" class="active">
@@ -146,7 +245,7 @@
 </div>
 <script src="/src/slide.js"></script>
 
-<!-- ISI KONTEN END -->
+<!-- Dokumentasi END -->
 </div>
 
 <!-- Peta -->
@@ -170,7 +269,7 @@
 <footer class="bg-HeaderFooter text-white py-8 px-6">
     <div class="flex justify-center items-center py-8 px-6 relative">
         <div class="max-w-[120px] h-[60px] p-2.5 top-[65px] md:absolute md:top-4 md:right-4 bg-white rounded-[17px] flex-col justify-start items-start gap-2.5 inline-flex">
-            <div class="Frame1 justify-center items-center gap-5 inline-flex">
+            <div class="justify-center items-center gap-5 inline-flex">
               <a href="https://www.instagram.com/manawaarutala" target="_blank">
                   <img class="Image2 w-10 h-10" src="\src\assets\img\logoIG.png" />
               </a>
@@ -181,7 +280,7 @@
         </div>
     </div>
 
-    <div class="min-h-screen flex justify-center text-center text-white text-4xl font-bold font-['SF Pro Display']">
+    <div class="flex justify-center text-center text-white text-4xl font-bold font-['SF Pro Display']">
         <h1 class="flex justify-center">Aksi Angkatan<br/>Teknik Geodesi dan Geomatika ITB 2023</h1>
     </div>
 </footer>
